@@ -11,7 +11,7 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
-let db = async () => {
+let config = async () => {
     const conn = await mongoose.connect('mongodb://localhost:27017/covid-db', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -63,7 +63,7 @@ let db = async () => {
 }
 
 // function call to import connect mongo instance and import db
-db();
+config();
 
 app.get('/', async (req,res) => {
   res.send('Welcome to our covid api...')  
