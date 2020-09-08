@@ -70,10 +70,10 @@ window.onload = async (e) => {
     }
 
     await getGlobalCases()
-    await activeCases(country_region)
-    await recoveredCases(country_region)
-    await deathCases(country_region)
-    await countryTotalCases(country_region)
+    await activeCases()
+    await recoveredCases()
+    await deathCases()
+    await countryTotalCases()
     document.querySelector('#loading').style.display = 'none'
 
     document.querySelector('#total-cases').innerHTML = totalCases
